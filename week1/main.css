@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --white: #ffffff;
+  --cream: #faebd7;
+  --blue: #6495ed;
+  --tan: #deb887;
+  --gray: #b4b3b3;
+  --black: #000000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", "Times New Roman", serif;
+}
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+header {
+  background-color: var(--blue);
+  text-align: end;
+  padding: 3rem 5%;
+}
+main {
+  background-color: var(--cream);
+  padding: 5%;
+}
+li {
+  list-style: none;
+  line-height: 2rem;
+}
+h2 {
+  margin: 1.5rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+header a {
+  color: var(--cream);
+}
+nav a:visited {
+  color: var(--cream);
+}
+nav a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+nav a:active {
+  color: var(--tan);
+}
+main a:visited {
+  color: var(--blue);
+}
+main a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+main a:active {
+  color: var(--tan);
+}
+h2 a {
+  color: var(--black);
+}
+h2 a:visited {
+  color: var(--black);
+}
+h2 a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+h2 a:active {
+  color: var(--tan);
+}
+
+/* --------- Article cards-------- */
+article {
+  background-color: var(--white);
+  filter: drop-shadow(5px 5px 2px var(--gray));
+  margin: 1rem 0;
+  padding: 1.8rem;
+}
+.post-date {
+  color: var(--gray);
+}
+h2 {
+  margin-bottom: 3rem;
+}
+figure {
+  text-align: center;
+}
+img {
+  max-width: 70%;
+}
+article p {
+  padding: 2rem 0;
+}
+/* -------Large Screen Responsive-------- */
+@media only screen and (min-width: 600px) {
+  body > div {
+    display: flex;
+  }
+  header {
+    min-width: 20%;
+  }
+}
