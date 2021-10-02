@@ -1,0 +1,32 @@
+
+/* ----------#1--------------- */
+fieldset[title=fieldset2] > p+p {
+  font-style:italic;
+  /*This is the best option because it uses a style attribute, which means that it will only affect the 2nd fieldset> 2nd paragraph> WITH a specific "title=fieldset2". Whereas the other method would target any 2nd child <p> of the second fieldset, even if a developer were to update or change the form around. Which could cause the wrong item to be styled. */
+}
+fieldset:nth-of-type(2) >p+p {
+  font-style:italic;
+}
+
+/* -----------------#2----------------- */
+span.help {
+  background-color: aliceblue;
+} /* this one targets a span element that also has a class of "help". It will not target a span without that matching class. And it won't match an element with the class "help" unless it is a span. */
+span .help {
+  background-color: goldenrod;
+} /*this one, with a space between selectors also known as a descendant combinator, targets an element with the class of "help" that has <span> as a parent*/
+
+/* -------------------#3------------------ */
+span.help::before {
+  content: "(";
+  color: red;
+}
+span.help::after {
+  content: ")";
+  color: red;
+}
+
+/* -------------------#4--------------------- */
+fieldset > p:nth-child(1n+4) {
+  display: none;
+}/*Displays the first and second <p> and hides any additional <p> elements*/

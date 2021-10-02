@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  background-color: #faebd7;
+  font-family: "Helvetica", "Arial", sans-serif;
+  padding: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", "Times New Roman", serif;
+}
+
+header {
+  text-align: end;
+  padding: 2rem;
+  padding-top: 3rem;
+  padding-right: 5%;
+  padding-bottom: 3rem;
+  padding-left: 5%;
+  background-color: #6495ed;
+}
+header a {
+  color: #faebd7;
+  background-color: "";
+}
+
+nav ul li {
+  list-style: none;
+  line-height: 2rem;
+}
+nav ul li a {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+nav ul li a:hover {
+  color: white;
+}
+
+article {
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem #b4b3b3);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  color: black;
+  background-color: white;
+}
+article h2 {
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-left: auto;
+}
+article h2 a {
+  color: black;
+}
+article h2 a:hover {
+  color: #6495ed;
+}
+article p {
+  padding-top: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2.5rem;
+}
+article p a {
+  color: #6495ed;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article div {
+  color: #b4b3b3;
+  background-color: "";
+}
+article figure {
+  text-align: center;
+}
+
+img {
+  max-width: 90%;
+}
+
+@media (min-width: 38em) {
+  body div {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-direction: row;
+  }
+  body div header {
+    min-width: 20%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

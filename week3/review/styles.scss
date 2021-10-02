@@ -1,0 +1,197 @@
+//global
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+//colors
+$key-color: #6495ed;
+$main-color: #faebd7;
+$highlight-color: #deb887;
+$shadow-color: #b4b3b3;
+$white: white;
+$font-color: black;
+
+@mixin colors($color, $bg-color) {
+  color: $color;
+  background-color: $bg-color;
+}
+
+//fonts
+$my-font: "Helvetica",
+"Arial",
+sans-serif;
+$headline-font: "Lora",
+"Times New Roman",
+serif;
+
+//padding & margins
+$med: 1rem;
+$thin: $med / 2;
+$thick: $med * 2;
+$xl: $med * 2.5;
+
+@mixin spacing($margin, $padding) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin flex-display($direction) {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -webkit-flex-flow: $direction;
+  -ms-flex-flow: $direction;
+  flex-direction: $direction;
+}
+
+//set breakpoint sizes
+$break-small: 38em;
+$break-medium: 50rem;
+$break-large: 60rem;
+
+@mixin media-break($break) {
+  @if $break==large {
+    @media (max-width: $break-large) {
+      @content;
+    }
+  }
+
+  @else if $break==medium {
+    @media (max-width: $break-medium) {
+      @content;
+    }
+  }
+
+  @else if $break==small {
+    @media (min-width: $break-small) {
+      @content;
+    }
+  }
+
+  @else {
+    @media ($break) {
+      @content;
+    }
+  }
+}
+
+main {
+  background-color: $main-color;
+  font-family: $my-font;
+  padding: ($med * 1.5);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headline-font;
+}
+
+header {
+  text-align: end;
+  @include spacing(null, $thick);
+  @include padding(($med * 3), 5%, ($med * 3), 5%);
+  @include colors(null, $key-color);
+
+  a {
+    @include colors($main-color, "");
+  }
+}
+
+nav {
+  ul {
+    li {
+      list-style: none;
+      line-height: $thick;
+
+      a {
+        font-family: $my-font;
+      }
+
+      a:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+article {
+  filter: drop-shadow($thin $thin $thin $shadow-color);
+
+  h2 {
+    a {
+      @include colors($font-color, null);
+    }
+
+    a:hover {
+      @include colors($key-color, null);
+    }
+
+    @include margin($med, auto, $thick, auto);
+  }
+
+  p {
+    a {
+      @include colors($key-color, null);
+    }
+
+    @include padding ($xl, $xl, $xl, $xl);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  div {
+    @include colors($shadow-color, "");
+  }
+
+  figure {
+    text-align: center;
+  }
+
+  @include margin($med, null, $med, null);
+  @include padding($med, $med, $med, $med);
+  @include colors($font-color, $white);
+}
+
+img {
+  max-width: 90%;
+}
+
+body {
+  div {
+    @include media-break(small) {
+      @include flex-display(row);
+
+      header {
+        min-width: 20%;
+      }
+    }
+  }
+}
