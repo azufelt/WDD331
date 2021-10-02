@@ -6,8 +6,8 @@ $key-color: #6495ed;
 $main-color: #faebd7;
 $highlight-color: #deb887;
 $shadow-color: #b4b3b3;
-$white: white;
-$font-color: black;
+$white: #ffffff;
+$font-color: #000000;
 
 @mixin colors($color, $bg-color) {
   color: $color;

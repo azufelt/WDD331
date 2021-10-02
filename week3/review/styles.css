@@ -44,7 +44,7 @@ nav ul li a {
   font-family: "Helvetica", "Arial", sans-serif;
 }
 nav ul li a:hover {
-  color: white;
+  color: #ffffff;
 }
 
 article {
@@ -55,8 +55,8 @@ article {
   padding-right: 1rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
-  color: black;
-  background-color: white;
+  color: #000000;
+  background-color: #ffffff;
 }
 article h2 {
   margin-top: 1rem;
@@ -65,7 +65,7 @@ article h2 {
   margin-left: auto;
 }
 article h2 a {
-  color: black;
+  color: #000000;
 }
 article h2 a:hover {
   color: #6495ed;
