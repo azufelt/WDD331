@@ -119,7 +119,7 @@ header {
   @include colors(null, $key-color);
 
   a {
-    @include colors($main-color, "");
+    @include colors($main-color, null);
   }
 }
 
@@ -168,7 +168,7 @@ article {
   }
 
   div {
-    @include colors($shadow-color, "");
+    @include colors($shadow-color, null);
   }
 
   figure {

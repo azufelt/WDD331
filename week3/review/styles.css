@@ -34,7 +34,6 @@ header {
 }
 header a {
   color: #faebd7;
-  background-color: "";
 }
 
 nav ul li {
@@ -85,7 +84,6 @@ article a:hover {
 }
 article div {
   color: #b4b3b3;
-  background-color: "";
 }
 article figure {
   text-align: center;
