@@ -1,11 +1,6 @@
 //global
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
 //colors
 $key-color: #6495ed;
 $main-color: #faebd7;
@@ -91,6 +86,11 @@ $break-large: 60rem;
       @content;
     }
   }
+}
+
+html {
+  padding: 0;
+  margin: 0;
 }
 
 main {
