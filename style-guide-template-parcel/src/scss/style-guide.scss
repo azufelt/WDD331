@@ -1,8 +1,10 @@
 @import 'partials/reset';
 @import 'partials/prefix-mixins';
 @import 'partials/layout'; // responsive grid and media queries
+@import 'partials/color-palette'; // color palette - these colors will be the color swatches of the Colors section
+@import 'partials/color-styles'; //some color styles of items i.e.-body {background-color}
+@import 'partials/fonts'; //font @imports google font & Adobe font
 
-// color palette - these colors will be the color swatches of the Colors section
 
 /* SCSS HSL */
 $main: hsla(40, 5%, 62%, 1);
