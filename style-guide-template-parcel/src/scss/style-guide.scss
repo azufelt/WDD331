@@ -11,6 +11,21 @@ $accent-1: hsla(35, 79%, 61%, 1);
 $accent-2: hsla(52, 46%, 44%, 1);
 $accent-3: hsla(19, 43%, 51%, 1);
 $dark: hsla(19, 43%, 16%, 1);
+$white: #ffffff;
+$green: hsla(122, 62%, 32%, 1);
+$red: hsla(1, 71%, 32%, 1);
+
+
+
+/* SCSS RGB */
+/*$isabelline: rgba(239, 236, 230, 1);
+$olive-green: rgba(164, 150, 61, 1);
+$brown-sugar: rgba(184, 110, 76, 1);
+$indian-yellow: rgba(234, 169, 75, 1);
+$quick-silver: rgba(163, 160, 154, 1);
+$bistre: rgba(58, 34, 23, 1);
+$india-green: rgba(31, 131, 34, 1);
+$ou-crimson-red: rgba(140, 26, 24, 1);*/
 
 $color-1: $main; // Quick Silver
 $color-2: $accent-1; // Indian Yellow
@@ -20,14 +35,21 @@ $color-5: $dark; // Bistre
 
 // additional colors
 
-$success: #6fce72; // green
-$alert: $color-3; // red
+$success: $green; // green
+$alert: $red; // red
 
 // fonts
-$primary-font: 'Merriweather',
-serif;
-$secondary-font: 'Open Sans',
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url("https://use.typekit.net/uyw3ycr.css");
+$primary-font: 'century-gothic',
+Arial,
+Helvetica,
 sans-serif;
+;
+$secondary-font: 'Abril Fatface',
+Georgia,
+Times,
+serif;
 
 /* -------------------------------- 
 
@@ -37,7 +59,7 @@ xBackground
 
 body {
   /* this is the page background */
-  background-color: $color-5;
+  background-color: $main;
 }
 
 /* -------------------------------- 
@@ -47,7 +69,7 @@ xPatterns
 -------------------------------- */
 
 .cd-box {
-  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
+  /* this is the container of various design elements - i.e. the 2 oo of the branding section */
   border: 1px solid $color-4;
   border-radius: 3px;
   background: $color-5;
@@ -149,7 +171,7 @@ xPage title
 -------------------------------- */
 
 main>h1 {
-  color: $color-2;
+  color: $dark;
 
   @include MQ(L) {
     /* title goes into the header on big devices */
@@ -166,7 +188,7 @@ xTypography
 h1,
 h2 {
   font-family: $secondary-font;
-  color: $color-2;
+  color: $dark;
 }
 
 h1 {
@@ -203,7 +225,7 @@ section>h2::before {
 p {
   font-size: 1.4rem;
   line-height: 1.4;
-  color: lighten($color-2, 25%);
+  color: lighten($light, 25%);
 
   a {
     color: $color-1;
@@ -235,7 +257,7 @@ xButtons
   color: $color-5;
   padding: 0.6em 2.2em;
   cursor: pointer;
-  background: $color-1;
+  background: $accent-1;
 
   &:focus {
     outline: none;
