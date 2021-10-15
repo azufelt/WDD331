@@ -1,0 +1,14 @@
+
+styles.css
+  8:1   ✖  Expected empty line before rule      rule-empty-line-before           
+ 13:1   ✖  Expected empty line before at-rule   at-rule-empty-line-before        
+ 21:1   ✖  Expected empty line before at-rule   at-rule-empty-line-before        
+ 39:1   ✖  Expected empty line before rule      rule-empty-line-before           
+ 43:1   ✖  Expected empty line before at-rule   at-rule-empty-line-before        
+ 55:3   ✖  Expected empty line before rule      rule-empty-line-before           
+ 61:3   ✖  Expected newline after ","           selector-list-comma-newline-after
+ 61:7   ✖  Expected newline after ","           selector-list-comma-newline-after
+ 61:11  ✖  Expected newline after ","           selector-list-comma-newline-after
+ 61:15  ✖  Expected newline after ","           selector-list-comma-newline-after
+ 61:19  ✖  Expected newline after ","           selector-list-comma-newline-after
+

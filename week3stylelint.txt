@@ -1,0 +1,57 @@
+
+week3/styles.css
+  2:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+  5:1   ✖  Expected "#contactform" to have a specificity no more than "0,2,1"            selector-max-specificity         
+  6:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+  8:1   ✖  Expected empty line before rule                                               rule-empty-line-before           
+  8:1   ✖  Expected "#contactform input" to have a specificity no more than "0,2,1"      selector-max-specificity         
+  8:19  ✖  Unexpected whitespace after "," in a multi-line list                          selector-list-comma-newline-after
+  8:19  ✖  Expected single space after ","                                               selector-list-comma-space-after  
+  9:1   ✖  Expected "#contactform textarea" to have a specificity no more than "0,2,1"   selector-max-specificity         
+ 10:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 11:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 13:1   ✖  Expected empty line before at-rule                                            at-rule-empty-line-before        
+ 14:3   ✖  Expected "#contactform" to have a specificity no more than "0,2,1"            selector-max-specificity         
+ 14:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 15:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 16:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 17:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 18:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 19:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 21:1   ✖  Expected empty line before at-rule                                            at-rule-empty-line-before        
+ 22:3   ✖  Expected "#contactform" to have a specificity no more than "0,2,1"            selector-max-specificity         
+ 22:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 23:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 24:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 25:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 26:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 27:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 31:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 32:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 33:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 34:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 35:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 36:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 37:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 39:1   ✖  Expected empty line before rule                                               rule-empty-line-before           
+ 40:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 41:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 43:1   ✖  Expected empty line before at-rule                                            at-rule-empty-line-before        
+ 44:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 45:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 46:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 47:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 48:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 49:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 50:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 51:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 52:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 53:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 54:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 55:3   ✖  Expected empty line before rule                                               rule-empty-line-before           
+ 55:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 56:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 57:5   ✖  Expected indentation of 2 tabs                                                indentation                      
+ 58:3   ✖  Expected indentation of 1 tab                                                 indentation                      
+ 62:3   ✖  Expected indentation of 1 tab                                                 indentation
+

@@ -1,6 +1,4 @@
-//global
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
-
 //colors
 $key-color: #6495ed;
 $main-color: #faebd7;
@@ -21,17 +19,11 @@ sans-serif;
 $headline-font: "Lora",
 "Times New Roman",
 serif;
-
 //padding & margins
 $med: 1rem;
-$thin: $med / 2;
+$thin: math.div($med, 2);
 $thick: $med * 2;
 $xl: $med * 2.5;
-
-@mixin spacing($margin, $padding) {
-  margin: $margin;
-  padding: $padding;
-}
 
 @mixin margin($top, $right, $bottom, $left) {
   margin-top: $top;
@@ -114,7 +106,6 @@ h6 {
 
 header {
   text-align: end;
-  @include spacing(null, $thick);
   @include padding(($med * 3), 5%, ($med * 3), 5%);
   @include colors(null, $key-color);
 
@@ -160,7 +151,7 @@ article {
       @include colors($key-color, null);
     }
 
-    @include padding ($xl, $xl, $xl, $xl);
+    @include padding($xl, $xl, $xl, $xl);
   }
 
   a:hover {
