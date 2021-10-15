@@ -5,3 +5,4 @@ node_modules/
 .cache
 build/
 .parcel-cache/
+package-lock.json
