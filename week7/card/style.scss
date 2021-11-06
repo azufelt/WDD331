@@ -1,0 +1,133 @@
+ $main-color: white;
+ $key-color: #871a1a;
+
+ $card-width: 60vw;
+ $card-height: $card-width*1.4;
+ $font-size-number: $card-width * 0.1;
+ $icon-size: $card-width /5;
+
+
+ $num-columns: 5;
+ $one-column: 100% / $num-columns;
+ $repeat-col: $num-columns - 2;
+ $small-col: $one-column / 1.6;
+ $loop-start: 1;
+ $loop-end: $num-columns+1;
+
+ $num-rows: 4;
+ $row-size: 100% / $num-rows;
+
+ @mixin col($span-num) {
+   grid-column: $span-num;
+ }
+
+ @mixin row($span-num) {
+   grid-row: $span-num;
+ }
+
+ .card-front {
+   width: $card-width;
+   height: $card-height;
+   border-radius: 10px;
+   background-color: $main-color;
+   filter: drop-shadow(15px 15px 15px gray);
+   margin: 0 auto;
+   position: relative;
+ }
+
+ /* //because it is a card front we want a bit of extra padding */
+ .card-front {
+   padding: .5em;
+ }
+
+ /* //set icon size */
+ .icon {
+   width: $icon-size;
+   height: $icon-size;
+ }
+
+ .number {
+   text-align: center;
+   font-size: $font-size-number;
+   color: $key-color;
+
+   /* //an icon that is part of a number should be half the normal size */
+   &>.icon {
+     width: $icon-size * .5;
+     height: $icon-size *.5;
+   }
+ }
+
+ //rotate number and pip upside-down
+ .rotate {
+   transform: rotate(180deg);
+ }
+
+ //create grid to display pips
+ .cardgrid {
+   display: grid;
+   grid-template-columns: $small-col repeat(($repeat-col), $one-column) $small-col;
+   grid-template-rows: repeat($num-rows, $row-size);
+   height: 100%;
+   width: 100%;
+   column-gap: 3.5%;
+   align-items: center;
+   justify-items: center;
+ }
+
+ @for $index from $loop-start to $loop-end {
+   .col-#{$index} {
+     @include col($index);
+   }
+ }
+
+ @for $index from $loop-start to $loop-end {
+   .offset-#{$index} {
+     @include row($index);
+   }
+ }
+
+
+
+
+
+
+
+
+
+ //SVG color
+ .cls-1 {
+   fill: #688928;
+ }
+
+ .cls-2 {
+   fill: #84b23b;
+ }
+
+ .cls-3 {
+   fill: $key-color;
+ }
+
+ .cls-4 {
+   fill: #fff;
+ }
+
+ .cls-5 {
+   fill: #8dc63f;
+ }
+
+ .cls-6 {
+   fill: #231f20;
+ }
+
+ .cls-7 {
+   fill: #b3e269;
+ }
+
+ .cls-8 {
+   fill: #d5eab0;
+ }
+
+ .cls-9 {
+   fill: #83b238;
+ }
