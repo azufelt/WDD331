@@ -1,0 +1,556 @@
+@import 'typography';
+@import 'icons';
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+$light-blue: #f8f9fa;
+$white: white;
+
+
+//variables
+
+//mixins
+@mixin button() {
+  margin: 1rem;
+  padding: .5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  color: $white;
+  background-color: $link-blue;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@mixin linkSpan($text-color, $background-color, $padding, $size, $weight) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: $padding;
+  background-color: $background-color;
+  color: $text-color;
+  font-size: $size;
+  font-weight: $weight;
+
+  span {
+    @include arrow($text-color);
+  }
+}
+
+@mixin arrow($text-color) {
+  font-size: 1.3rem;
+  font-weight: 100;
+  color: $text-color;
+}
+
+@mixin ulPara($text-color,
+  $accent,
+  $weight) {
+  .li-description {
+    display: flex;
+    flex-direction: column;
+
+    .date {
+      color: $text-color;
+      font-weight: $weight;
+    }
+
+    h4 {
+      color: $accent;
+    }
+
+    p {
+      line-height: 1rem;
+    }
+  }
+}
+
+// MEDIA QUERY Breakpoints
+
+$sm-break: 48em;
+
+@mixin flexBox($direction, $space) {
+  display: flex;
+  flex-direction: $direction;
+  column-gap: $space;
+}
+
+@mixin breakpoint($break) {
+  @if $break==break {
+    @media (min-width: $sm-break) {
+      @content;
+    }
+  }
+}
+
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: $byui-blue;
+
+  .site-banner {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 2rem;
+
+    @include breakpoint(break) {
+      width: 75%;
+      margin: auto;
+      height: 60px;
+    }
+  }
+
+  .icon-byui-logo {
+    text-decoration: none;
+    color: $white;
+
+
+  }
+
+  .site-banner__left {
+    background-color: $body-font;
+    padding: .8rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    @include breakpoint(break) {
+      position: absolute;
+      top: 0;
+      width: 82px;
+      height: 82px;
+      text-align: center;
+    }
+  }
+
+  .site-banner__right {
+    padding-right: 1rem;
+
+
+    a {
+      color: $white;
+      text-decoration: none;
+      border: 0px;
+    }
+  }
+
+  .main-banner {
+    font-family: "BYUI Open Sans",
+      "Open Sans",
+      "Lucida Sans Unicode",
+      "Lucida Grande",
+      Verdana,
+      sans-serif;
+    background-color: $light-gray;
+    font-weight: 300;
+    font-style: normal;
+    font-size: .6rem;
+    padding: 1.3rem;
+    border-bottom: 1px solid $med-gray;
+    padding-left: 5rem;
+
+    h1 {
+      font-weight: 200;
+
+      @include breakpoint(break) {
+        max-width: 83%;
+        margin: 0 auto;
+        font-size: 2rem;
+      }
+    }
+
+    a {
+      color: $body-font;
+      text-decoration: none;
+    }
+  }
+}
+
+main {
+  font-family: "BYUI Open Sans",
+    "Open Sans",
+    "Lucida Sans Unicode",
+    "Lucida Grande",
+    Verdana,
+    sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  padding: 1rem;
+
+}
+
+.above-fold {
+  .box1 {
+    color: $white;
+    background-color: $body-font;
+    text-align: center;
+    padding: 1rem;
+
+    @include breakpoint(break) {
+      max-width: 800px;
+      margin: 0;
+      @include flexBox(row, 2rem);
+      justify-content: space-around;
+      align-items: center;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    button {
+      @include button();
+    }
+  }
+
+  div {
+    margin: 2rem auto;
+  }
+
+  figure {
+    border: 1px solid $med-gray;
+    margin: 2rem auto;
+
+    a {
+      @include linkSpan($link-blue, $white, .3rem, 1rem, 400);
+
+      span {
+        -webkit-text-stroke: 4px white;
+      }
+    }
+  }
+
+  @include breakpoint(break) {
+    @include flexBox(row, 3rem);
+    max-width: 75%;
+    margin: 0 auto;
+  }
+}
+
+.infoBtn {
+  @include linkSpan($body-font, $light-gray, .5rem, 1rem, 700);
+  // padding: .5rem;
+  // font-weight: 700;
+  border: 1px solid $med-gray;
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  @include breakpoint(break) {
+    margin-top: 0rem;
+  }
+}
+
+.resources {
+  margin-top: 2rem;
+
+  h3 {
+    background-color: $dark-gray;
+    color: $white;
+    padding: .5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    border-left: 1px solid $med-gray;
+    border-right: 1px solid $med-gray;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      @include linkSpan($link-blue, $light-blue,
+        .5rem,
+        1rem,
+        400);
+      border-bottom: 1px solid $med-gray;
+
+      span {
+        -webkit-text-stroke: 4px $light-blue;
+      }
+    }
+  }
+}
+
+.col {
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.col-3 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-8 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 66.6666666667%;
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+}
+
+.datesList {
+  margin-top: 2rem;
+  border-bottom: 1px solid $med-gray;
+
+  h3 {
+    background-color: $link-blue;
+    color: $white;
+    padding: .5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .dateBox {
+    margin: 0rem;
+
+    @include linkSpan($body-font, $white, .5rem 1.5rem, .8rem, normal);
+
+    div {
+      margin: 0;
+      font-weight: 700;
+    }
+  }
+}
+
+.below-fold {
+
+  .main-col {
+    img {
+      display: none;
+
+      @include breakpoint(break) {
+        display: block;
+        max-width: 165px;
+        max-height: 110px;
+        object-fit: cover;
+      }
+    }
+
+    li {
+      border-top: 1px solid $med-gray;
+
+      @include breakpoint(break) {
+        @include flexBox(row, 2rem);
+        padding: 1.5rem 0;
+      }
+    }
+  }
+
+
+  li {
+    margin: 1rem;
+  }
+
+  .li-description {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    // border-top: 1px solid $med-gray;
+
+    .date {
+      font-size: .7rem;
+      font-weight: 700;
+    }
+
+    h4 {
+      color: $link-blue;
+      padding: 1rem 0;
+      font-weight: 400px;
+    }
+
+    p {
+      font-family: "BYUI Merriweather",
+        "Merriweather",
+        "Palatino Linotype",
+        "Book Antiqua",
+        Palatino,
+        serif;
+      line-height: 1.5rem;
+      font-weight: lighter;
+    }
+  }
+
+  @include breakpoint(break) {
+    @include flexBox(row, 3rem);
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+}
+
+.main-col {
+
+  .blueBtn {
+    @include button();
+  }
+
+  .box3 {
+    max-width: 67%;
+    margin: 2rem auto;
+
+    @include breakpoint(break) {
+      @include flexBox(row, 2rem);
+    }
+  }
+
+  @include breakpoint(break) {
+    flex: 0 0 66.66%;
+  }
+}
+
+.right-col figure {
+  border: 1px solid $med-gray;
+  border-radius: 10px;
+
+
+  img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+  }
+
+  figcaption {
+
+    padding: .5rem;
+
+    h4 {
+      color: $link-blue;
+      font-weight: 700;
+    }
+
+    .date {
+      font-size: .8rem;
+      padding-top: .5rem;
+      font-weight: 700;
+    }
+
+    p {
+      padding-top: .5rem;
+      font-size: .8rem;
+    }
+  }
+
+  button {
+    @include button();
+  }
+
+  @include breakpoint(break) {
+    flex: 0 0 33.33%;
+  }
+}
+
+.right-align {
+  text-align: right;
+}
+
+footer {
+
+  // text-align: center;
+
+
+  .light-background::after {
+    background-color: $light-gray;
+    height: 50px;
+    border-top: 1 px solid #C6C7C8;
+    content: "";
+    display: block;
+    padding: 30px;
+  }
+
+  .light-background::before {
+    background: url(https://www.byui.edu/prebuilt/stylenew/images/foot/taylor_graphic_fixed.png) bottom no-repeat;
+    content: "";
+    display: block;
+    height: 130px;
+    padding: 0;
+  }
+
+  .blue-background {
+    background-color: $link-blue;
+    padding: 1rem;
+    font-family: "BYUI Open Sans",
+      "Open Sans",
+      "Lucida Sans Unicode",
+      "Lucida Grande",
+      Verdana,
+      sans-serif;
+
+    div {
+      h3 {
+        color: $white;
+        font-size: 2rem;
+      }
+
+      p {
+        color: $white;
+        line-height: 1.5rem;
+        ;
+      }
+
+      @include breakpoint(break) {
+        max-width: 60%;
+        margin: 0 auto;
+
+        p {
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+
+
+}

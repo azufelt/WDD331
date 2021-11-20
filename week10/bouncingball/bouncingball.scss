@@ -1,0 +1,74 @@
+// *******bouncing ball
+// .small-card {
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 25px;
+//   background-color: rgb(34, 0, 255);
+//   filter: drop-shadow(15px 15px 15px gray);
+//   position: absolute;
+//   top: 70%;
+//   left: 10%;
+//   animation: bouncingSquare 5s;
+//   transition: all 3s cubic-bezier(0.5, V, 1, V); // transition-timing-function: cubic-bezier(0.970, -0.600, 0.000, 1.650);
+//   z-index: 2;
+// }
+
+// @keyframes bouncingSquare {
+//   0% {
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 25px;
+//     top: 0;
+//     left: 75%;
+//   }
+
+//   10% {
+//     top: 50%;
+//     left: 70%;
+//   }
+
+//   20% {
+//     top: 10%;
+//     left: 65%;
+//   }
+
+//   30% {
+//     top: 60%;
+//     left: 60%;
+//   }
+
+//   40% {
+//     top: 25%;
+//     left: 55%;
+//   }
+
+//   50% {
+//     top: 65%;
+//     left: 50%;
+//   }
+
+//   60% {
+//     top: 35%;
+//     left: 40%;
+//   }
+
+//   70% {
+//     top: 70%;
+//     left: 35%;
+//   }
+
+//   80% {
+//     top: 35%;
+//     left: 30%;
+//   }
+
+//   90% {
+//     // top: 30%;
+//     // left: 30%;
+//   }
+
+//   100% {
+//     top: 70%;
+//     left: 25%;
+//   }
+// }

@@ -1,0 +1,298 @@
+html {
+  background: aliceblue;
+}
+
+.list ol {
+  column-count: 2;
+  column-gap: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.animationBox,
+.cardRecipe {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+}
+
+.card-front {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  filter: drop-shadow(15px 15px 15px gray);
+  position: absolute;
+  top: 200px;
+  left: 60%;
+  animation: slideRight 5s;
+  transition: all 5s cubic-bezier(0.970, -0.600, 0.000, 1.650);
+  z-index: 1;
+}
+
+@keyframes slideRight {
+  0% {
+    left: 60%;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(142, 154, 163);
+  }
+
+  30% {
+    left: calc(60% + 100px);
+    width: 100px;
+    height: 100px;
+    background-color: rgb(174, 186, 196);
+  }
+
+  33.33% {
+    left: calc(60% + 100px);
+    width: 100px;
+    height: 100px;
+    background-color: rgb(174, 186, 196);
+  }
+
+  60% {
+    left: 60%;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(200, 209, 216);
+  }
+
+  66.66% {
+    left: 60%;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(200, 209, 216);
+  }
+
+  75% {
+    background-color: rgb(240, 240, 240);
+  }
+
+  90% {
+    left: 60%;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+  }
+
+
+  100% {
+    left: 60%;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+  }
+}
+
+
+/* ************Rainbow Swatch******** */
+$red: #F73F52;
+$orange: #FF9000;
+$yellow: #FBD400;
+$green: #9ED763;
+$blue: #6730EC;
+$purple: #815A8F;
+$white: #FFFFFF;
+
+.cardswatch {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 100px;
+  width: 300px;
+  height: 300px;
+  transition: all 5s cubic-bezier(0, 0.55, 0.45, 1);
+
+  div {
+    width: 70px;
+    height: 225px;
+    position: absolute;
+    top: 0px;
+    border-radius: 5px;
+    border-top: solid 2px rgba(0, 0, 0, .2);
+    border-left: solid 3px rgba(255, 255, 255, .2);
+    border-bottom: solid 3px rgba(0, 0, 0, .2);
+    text-align: center;
+    box-sizing: border-box;
+    transform-origin: center 90%;
+    display: inline-block;
+    backface-visibility: hidden;
+    margin-left: -35px;
+    transform: rotate(0deg);
+  }
+
+  div:before {
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-color: $white;
+    display: inline-block;
+    border-radius: 8px;
+    bottom: 10px;
+    position: absolute;
+    margin-left: -8px;
+  }
+
+
+  .purple {
+    background-color: $purple;
+    transition: all 5s cubic-bezier(0, 0.55, 0.45, 1);
+  }
+
+  .blue {
+    background-color: $blue;
+    transition: all 5s cubic-bezier(0, 0.55, 0.45, 1);
+  }
+
+  .green {
+    background-color: $green;
+    transition: all 5s cubic-bezier(0, 0.55, 0.45, 1);
+  }
+
+  .yellow {
+    background-color: $yellow;
+    transition: all 5s cubic-bezier(0, 0.55, 0.45, 1);
+  }
+
+  .orange {
+    background-color: $orange;
+    transition: all 5s cubic-bezier(0, 0.55, 0.45, 1);
+  }
+
+  .red {
+    background-color: $red;
+    transition: all 5s cubic-bezier(0, 0.55, 0.45, 1);
+  }
+}
+
+.cardswatch:hover {
+  transition: all cubic-bezier(0, 0.55, 0.45, 1);
+
+  .purple {
+    animation: swatch-purple-motion 5s;
+  }
+
+  .blue {
+    animation: swatch-blue-motion 5s;
+  }
+
+  .green {
+    animation: swatch-green-motion 5s;
+  }
+
+  .yellow {
+    animation: swatch-yellow-motion 5s;
+  }
+
+  .orange {
+    animation: swatch-orange-motion 5s;
+  }
+
+  .red {
+    animation: swatch-red-motion 5s;
+  }
+
+}
+
+
+@keyframes swatch-purple-motion {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30%,
+  70% {
+    transform: rotate(-65deg);
+  }
+
+  90%,
+  10% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swatch-blue-motion {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30%,
+  70% {
+    transform: rotate(-40deg);
+  }
+
+  90%,
+  10% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swatch-green-motion {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30%,
+  70% {
+    transform: rotate(-15deg);
+  }
+
+  90%,
+  10% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swatch-yellow-motion {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30%,
+
+  70% {
+    transform: rotate(15deg);
+  }
+
+  90%,
+  10% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swatch-orange-motion {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30%,
+
+  70% {
+    transform: rotate(40deg);
+  }
+
+  90%,
+  10% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swatch-red-motion {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30%,
+
+  70% {
+    transform: rotate(65deg);
+  }
+
+  90%,
+  10% {
+    transform: rotate(0deg);
+  }
+}

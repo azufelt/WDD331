@@ -1,0 +1,102 @@
+.curtain {
+  //ensures the component is full screen width
+  width: 100%;
+  //for demo purposes, need a veiw-height
+  height: 100vh;
+  //Allows panels to slide outside the container without them showing or producing a horizontal scroll
+  overflow: hidden;
+}
+
+.curtain_wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.curtain_panel {
+  background-color: rgb(51, 69, 109);
+  //each panel takes up half the container;
+  width: 50%;
+  //once again, demo purposes;
+  height: 100vh;
+  //make sure panels are side by side
+  float: left;
+  //in order to define z-index
+  position: relative;
+  //layers panels in front of the prize
+  z-index: 2;
+  //animate the slide transition
+  transition: all 1s ease-out;
+}
+
+.panel-left {
+  // Slide the panel to the left out of the container 
+  transform: translateX(-100%);
+}
+
+.panel-right {
+  // Slide the panel to the right out of the container 
+  transform: translateX(100%);
+}
+
+.prize {
+  background: aliceblue;
+  //forces element position
+  position: absolute;
+  //puts behind the curtains
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+
+.prize-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10%;
+
+  span {
+    font-size: 15rem;
+  }
+}
+
+//using a checkbox input for the 'click' action to activate the curtains to slide
+input[type=checkbox] {
+  // Force the checkbox inside the container 
+  position: absolute;
+  // To indicate the curtain can be clicked 
+  cursor: pointer;
+  // The checkbox input takes up the whole container 
+  width: 100%;
+  height: 700px;
+  // Make sure the checkbox is on top of EVERYTHING else 
+  z-index: 100;
+  // Hide the actual checkbox marker
+  opacity: 0;
+}
+
+// **When the user clicks the checkbox, slide open the curtains **
+// Slide the left panel 
+input[type=checkbox]:checked~div.panel-left {
+  transform: translateX(0);
+}
+
+// Slide the right panel 
+input[type=checkbox]:checked~div.panel-right {
+  transform: translateX(0);
+}
+
+
+.clickMe {
+  color: aliceblue;
+  border: 3px solid aliceblue;
+  padding: .8rem;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  z-index: 3;
+  width: 100px;
+  text-align: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
